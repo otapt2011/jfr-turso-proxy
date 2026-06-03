@@ -1,0 +1,18 @@
+{
+  "name": "turso-vercel-proxy",
+  "version": "1.0.0",
+  "description": "Vercel proxy API for Turso database",
+  "main": "api/turso.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel deploy --prod"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.14.0"
+  },
+  "devDependencies": {
+    "vercel": "^34.0.0"
+  },
+  "keywords": ["turso", "vercel", "proxy", "sqlite"],
+  "license": "MIT"
+}

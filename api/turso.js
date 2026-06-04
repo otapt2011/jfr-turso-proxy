@@ -36,7 +36,7 @@ async function execute(sql, params) {
   const result = await client.execute({ sql, args: params || {} });
   return {
     rows: result.rows,
-    columns: result.columns.map(c => c.name),
+    columns: result.columns?.map(c => typeof c === 'string' ? c : c.name) || [],
     rowsAffected: result.rowsAffected,
     lastInsertRowid: result.lastInsertRowid
   };
